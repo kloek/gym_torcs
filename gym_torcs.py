@@ -182,11 +182,16 @@ class TorcsEnv:
         g = image_vec[1:len(image_vec):3]
         b = image_vec[2:len(image_vec):3]
 
-        sz = (64, 64)
-        r = np.array(r).reshape(sz)
-        g = np.array(g).reshape(sz)
-        b = np.array(b).reshape(sz)
-        return np.array([r, g, b], dtype=np.uint8)
+        print("==========================================================================")
+        test = list(zip(r,g,b))
+        sz = (64, 64, 3)
+        #r = np.array(r).reshape(sz)
+        #g = np.array(g).reshape(sz)
+        #b = np.array(b).reshape(sz)
+        rgb = np.asarray(test).reshape((64,64,3))
+        #print("OBS_VISION_TO_IMAGE_RGB rgb size = " + str(np.asarray(rgb).shape))
+
+        return np.array(rgb, dtype=np.uint8)
 
     def scale_observation(self, raw_obs):
         ## listed all for future work but only scale the ones i need!!!
