@@ -182,7 +182,6 @@ class TorcsEnv:
         g = image_vec[1:len(image_vec):3]
         b = image_vec[2:len(image_vec):3]
 
-        print("==========================================================================")
         test = list(zip(r,g,b))
         sz = (64, 64, 3)
         #r = np.array(r).reshape(sz)
