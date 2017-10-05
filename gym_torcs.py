@@ -26,7 +26,7 @@ class TorcsEnv:
             time.sleep(0.5)
             self.torcs_proc = None
         window_title = str(self.port)
-        command = 'torcs -nofuel -nodamage -nolaptime -title {} -p {}'.format(window_title, self.port)
+        command = 'torcs -nofuel -nolaptime -title {} -p {}'.format(window_title, self.port)
         if self.vision is True:
             command += ' -vision'
         self.torcs_proc = subprocess.Popen([command], shell=True, preexec_fn=os.setsid)
