@@ -148,7 +148,7 @@ class TorcsEnv:
 
         reward = progress + penalty
         self.time_step += 1
-        return [reward, progress, penalty, reward_old]
+        return [reward_old, progress, penalty, reward_old]
 
     def reset(self, relaunch=False):
         #print("Reset")
