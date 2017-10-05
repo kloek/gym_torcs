@@ -123,7 +123,7 @@ class TorcsEnv:
 
         # collision detection
         if obs['damage'] - obs_pre['damage'] > 0:
-            reward_old = -(obs['damage'] - obs_pre['damage'])
+            reward_old = -1
 
         # Termination judgement #########################
         #if track.min() < 0:  # Episode is terminated if the car is out of track
@@ -148,7 +148,7 @@ class TorcsEnv:
 
         reward = progress + penalty
         self.time_step += 1
-        return [reward, progress, penalty, reward_old]
+        return [reward_old, progress, penalty, reward_old]
 
     def reset(self, relaunch=False):
         #print("Reset")
