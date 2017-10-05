@@ -8,6 +8,10 @@ vtorcs-RL-color/**
 .idea/**
 
 runs/
+new_runs/
+multiple_runs/
+
+multiple_runs.sh
 
 TorcsProjectVersion
 agent_version
